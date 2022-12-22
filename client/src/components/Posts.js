@@ -78,12 +78,18 @@ function Posts(){
                             <Form.Control.Feedback type="invalid">
                                 Please provide a title.
                             </Form.Control.Feedback>
+                            <Form.Text muted>
+                                Maximum title length is 20.
+                            </Form.Text>
                         </Form.Group>
                         <Form.Group>
                             <Form.Control name='description' value={updatedPost.description ? updatedPost.description : ""} onChange={handleChange} placeholder="Post Description" as="textarea" rows={3} maxLength={100} required />
                             <Form.Control.Feedback type="invalid">
                                 Please provide a description.
                             </Form.Control.Feedback>
+                            <Form.Text muted>
+                                Maximum description length is 100.
+                            </Form.Text>
                         </Form.Group>
                         </div>
                     </Modal.Body>
