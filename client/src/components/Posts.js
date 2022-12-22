@@ -82,7 +82,7 @@ function Posts(){
                         <Form.Group>
                             <Form.Control name='description' value={updatedPost.description ? updatedPost.description : ""} onChange={handleChange} placeholder="Post Description" as="textarea" rows={3} required />
                             <Form.Control.Feedback type="invalid">
-                                Please provide a valid city.
+                                Please provide a description.
                             </Form.Control.Feedback>
                         </Form.Group>
                         </div>
@@ -97,19 +97,21 @@ function Posts(){
                     </Modal.Footer>
                 </Form>
             </Modal>
-            {posts ? (<div style={{display:"flex", flowDirection:"row", flexWrap:"wrap", gap:"10px"}}>
+            {posts ? (<div style={{display:"flex", flowDirection:"row", flexWrap:"wrap", gap:"10px", alignItems:"stretch"}}>
                 {posts.map(post => {
                     return(
                         <div key={post._id}>
-                        <Card>
+                        <Card style={{maxWidth: '20rem', height:"100%"}}>
                             <Card.Header as="h5">{post.title}</Card.Header>
                             <Card.Body>
                                 <Card.Text>{post.description}</Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
                                 <div style={{display:"flex", flowDirection:"row", gap:"10px", justifyContent:"flex-end"}}>
                                 <Button onClick={() => updatePost(post)} variant="info">UPDATE</Button>
                                 <Button onClick={() => deletePost(post._id)} variant="danger">DELETE</Button>
                                 </div>
-                            </Card.Body>
+                            </Card.Footer>
                         </Card>
                         </div>
                     )

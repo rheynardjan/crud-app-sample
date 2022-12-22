@@ -58,7 +58,7 @@ function CreatePost(){
             <Form.Group>
                 <Form.Control name='description' value={post.description} onChange={handleChange} placeholder="Post Description" as="textarea" rows={3} required />
                 <Form.Control.Feedback type="invalid">
-                    Please provide a valid city.
+                    Please provide a description.
                 </Form.Control.Feedback>
             </Form.Group>
             </div>
