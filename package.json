@@ -2,10 +2,10 @@
   "name": "crud-app-new",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "client/public/index.html",
   "scripts": {
     "build": "npm install && cd client && npm install && npm run build",
-    "start": "node server.js",
+    "start": "node server.js && cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
