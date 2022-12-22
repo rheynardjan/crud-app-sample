@@ -50,13 +50,13 @@ function CreatePost(){
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <div style={{display:"flex", flexDirection:"column", gap:"10px"}}>
             <Form.Group>
-                <Form.Control name='title' value={post.title} onChange={handleChange} placeholder="Post Title" required />
+                <Form.Control name='title' value={post.title} onChange={handleChange} placeholder="Post Title" maxLength={20} required />
                 <Form.Control.Feedback type="invalid">
                     Please provide a title.
                 </Form.Control.Feedback>
             </Form.Group>
             <Form.Group>
-                <Form.Control name='description' value={post.description} onChange={handleChange} placeholder="Post Description" as="textarea" rows={3} required />
+                <Form.Control name='description' value={post.description} onChange={handleChange} placeholder="Post Description" as="textarea" rows={3} maxLength={100} required />
                 <Form.Control.Feedback type="invalid">
                     Please provide a description.
                 </Form.Control.Feedback>
