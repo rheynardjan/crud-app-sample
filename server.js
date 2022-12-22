@@ -22,10 +22,6 @@ const postSchema = mongoose.Schema({
 
 const Post = mongoose.model("Post", postSchema);
 
-app.get("/", (req, res) => {
-    res.send("Express is running.");
-});
-
 app.post("/create", (req, res) => {
     Post.create({
         title: req.body.title,
